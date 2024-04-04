@@ -3,14 +3,12 @@ package com.steps;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import junit.framework.Assert;
 
 public class LoginStep {
 	
@@ -19,8 +17,8 @@ public class LoginStep {
 	
 	@Given("User navigates to login page {string}")
 	public void user_navigates_to_login_page(String url) throws InterruptedException {
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		WebDriverManager.safaridriver().setup();
+		driver = new SafariDriver();
 		Thread.sleep(2000);
 		driver.manage().window().maximize();
 		driver.get(url);

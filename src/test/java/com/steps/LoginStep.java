@@ -19,8 +19,8 @@ public class LoginStep {
 	
 	@Given("User navigates to login page {string}")
 	public void user_navigates_to_login_page(String url) throws InterruptedException {
-		WebDriverManager.firefoxdriver().setup();
-		driver = new FirefoxDriver();
+		WebDriverManager.chromedriver().setup();
+		driver = new ChromeDriver();
 		Thread.sleep(2000);
 		driver.manage().window().maximize();
 		driver.get(url);
